@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-custom {
+    background-color: white;
+    padding: 0; /* Убрали отступы у верхнего навигационного меню */
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.navbar-brand:hover {
+    color: #007894;
+}
+
+.navbar-text {
+    font-size: 1rem;
+    color: #222;
+    padding: 0; /* Убрали отступы у navbar-text */
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.second-navbar {
+    background-color: #222;
+    margin-top: 84px;
+}
+
+.nav-link {
+    color: white;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #007894;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"%3E%3Cpath stroke="currentColor" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+.navbar-toggler {
+    background-color: #fff;
+    border: none;
+    margin-left: 0.5rem;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.nav-item {
+    margin: 0 2rem;
+}
+
+.menu-text {
+    display: block;
+    text-align: center;
+    color: #222;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.img-fluid {
+    width: 100%;
+    max-height: 75vh;
+    object-fit: cover;
+}
+
+.image-container {
+    margin-top: 140px;
+    position: relative;
+    width: 100%;
+}
+
+.image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.welcome-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+    padding: 100px; /* Добавляем отступы */
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.about-program-section {
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.about-program-section h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.about-program-section p {
+    text-align: left;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.about-program-section .btn-primary {
+    background-color: #007894;
+    border-color: #007894;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+}
+
+.about-program-section .btn-primary:hover {
+    background-color: #005f6a;
+    border-color: #005f6a;
+}
+
+.news-section {
+    background-color: #007894;
+    padding: 0 0 60px 0; /* Изменен верхний отступ на 0 */
+    text-align: center;
+    color: white;
+}
+
+.news-section h2 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.news-section p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.news-section .btn-light {
+    background-color: #ffffff;
+    color: #007894;
+    padding: 5px 10px; /* Уменьшили отступы */
+    font-size: 0.9rem; /* Уменьшили размер шрифта */
+    margin-top: 20px;
+}
+
+.news-section .btn-light:hover {
+    background-color: #e6e6e6;
+    color: #007894;
+}
+
+.btn {
+    width: 200px;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+}
+
+footer {
+    padding: 0; /* Убрали все отступы у footer */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.container {
+    padding: 0;
+}
+
+.footer-link {
+    color: #007894; 
+    text-decoration: underline; 
+}
+
+.footer-link:hover {
+    color: #005f6a;
+    text-decoration: underline; 
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap; /* Позволяет элементам переходить на новую строку при необходимости */
+    justify-content: center; /* Центрирует элементы */
+    gap: 20px; /* Увеличивает расстояние между новостями */
+}
+
+.news-item {
+    flex: 0 1 calc(33.333% - 20px); /* Для десктопов 3 колонки */
+    margin-bottom: 20px; 
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: white;
+}
+
+/* Адаптация для экранов шириной до 768px (планшеты) */
+@media (max-width: 768px) {
+    .news-item {
+        flex: 0 1 calc(50% - 20px); /* На планшетах 2 колонки */
+    }
+}
+
+/* Адаптация для экранов шириной до 576px (мобильные устройства) */
+@media (max-width: 576px) {
+    .news-item {
+        flex: 0 1 100%; /* На мобильных устройствах 1 колонка */
+        padding: 15px;  /* Уменьшаем внутренние отступы */
+    }
+
+    .news-item .title {
+        font-size: 1.1rem; /* Немного уменьшаем размер заголовка */
+    }
+
+    .news-item .date {
+        font-size: 0.75rem; /* Уменьшаем размер даты */
+    }
+
+    .news-item .description {
+        font-size: 0.9rem; /* Уменьшаем описание */
+    }
+}
+
+/* Стили для иконки загрузки и подписи */
+.loading-text {
+    text-align: center;
+    margin-top: 10px;
+    color: #007894; /* Цвет текста */
+    font-size: 1.2rem; /* Размер шрифта */
+}
+
+
+/* Добавьте этот код в ваш CSS */
+.btn-primary {
+    background-color: #007894; /* Ваш новый цвет фона */
+    border-color: #007894; /* Новый цвет границы */
+}
+
+.btn-primary:hover {
+    background-color: #005f6a; /* Цвет фона при наведении */
+    border-color: #005f6a; /* Цвет границы при наведении */
+}
